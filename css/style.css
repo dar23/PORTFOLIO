@@ -54,12 +54,13 @@ body {
 /* === Individual Post === */
 .post_window {
  width: 100%;
-  height: 400px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
+  height: 700px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
   background: #ffffffa3;
   border-radius: 10px;
-  padding: 18px 24px; /* Twój obecny padding, który powodował problem */
+    background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
   box-sizing: border-box; /* To jest klucz do rozwiązania problemu */
-  color: #333; /* Dodałem kolor tekstu dla czytelności */
+  
   border: 1px solid rgba(255, 255, 255, 0.28); /* Odzyskałem border, jeśli był zamierzony */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Odzyskałem cień, jeśli był zamierzony */
   /* Dodaj obsługę przepełnienia, jeśli tekst ma być wewnątrz */
@@ -67,9 +68,41 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   margin-top:15px;
+  text-align: justify;
+ 
   margin-bottom: 20px;
   
 }
+
+
+
+ img{
+  max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    
+ }
+
+p {
+    margin: 16px 0;
+    padding: 10px;       /* odstępy nad i pod */
+    text-indent: 15px;    /* wcięcie pierwszej linii */
+    line-height: 1.6;     /* odstępy między wierszami */
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* === Post Form === */
