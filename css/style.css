@@ -36,7 +36,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
 }
+
+
+
+
 
 /* === Scrollable Post List === */
 .posts_list {
@@ -44,20 +49,20 @@ body {
   max-height: auto; /* Pozwala na dynamiczną wysokość */
   overflow-y: auto;
   margin-bottom: 10px;
-  scrollbar-width: none; /* Firefox */
+
 }
 
 .posts_list::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
-}
+  visibility: hidden; /* IE 10+ */}
 
 /* === Individual Post === */
 .post_window {
  width: 100%;
-  height: 700px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
+  min-height: 700px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
   background: #ffffffa3;
   border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.031);
   backdrop-filter: blur(15px);
   box-sizing: border-box; /* To jest klucz do rozwiązania problemu */
   
@@ -65,7 +70,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Odzyskałem cień, jeśli był zamierzony */
   /* Dodaj obsługę przepełnienia, jeśli tekst ma być wewnątrz */
   overflow-y: auto; /* Dodałem, żeby długi tekst nie wychodził poza okno */
-  scrollbar-width: thin;
+ 
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   margin-top:15px;
   text-align: justify;
@@ -80,7 +85,7 @@ body {
   max-width: 100%;
     height: auto;
     border-radius: 0;
-    
+    z-index: 1;
  }
 
 p {
