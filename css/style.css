@@ -1,0 +1,143 @@
+
+
+body {
+  padding: 10px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to left, rgba(0, 120, 200, 1), rgba(0, 150, 255, 1));
+  color: #fff;
+}
+
+/* === Layout === */
+.main_content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: calc(100vh - 20px);
+  background: inherit;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* === Left Column: Posts Section === */
+.part_one {
+  width: 600px;
+  padding: 10px 10px;
+  padding-bottom: 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === Scrollable Post List === */
+.posts_list {
+  width: 95%;
+  max-height: auto; /* Pozwala na dynamiczną wysokość */
+  overflow-y: auto;
+  margin-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.posts_list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* === Individual Post === */
+.post_window {
+ width: 100%;
+  height: 400px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
+  background: #ffffffa3;
+  border-radius: 10px;
+  padding: 18px 24px; /* Twój obecny padding, który powodował problem */
+  box-sizing: border-box; /* To jest klucz do rozwiązania problemu */
+  color: #333; /* Dodałem kolor tekstu dla czytelności */
+  border: 1px solid rgba(255, 255, 255, 0.28); /* Odzyskałem border, jeśli był zamierzony */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Odzyskałem cień, jeśli był zamierzony */
+  /* Dodaj obsługę przepełnienia, jeśli tekst ma być wewnątrz */
+  overflow-y: auto; /* Dodałem, żeby długi tekst nie wychodził poza okno */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  margin-top:15px;
+  margin-bottom: 20px;
+  
+}
+
+
+/* === Post Form === */
+form {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input.tweet {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.submit_button button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit_button button:hover {
+  background-color: #005fa3;
+}
+
+/* === Right Column: Additional Section === */
+.part_two {
+  width: 300px;
+  padding: 20px 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Responsive Layout === */
+@media screen and (max-width: 768px) {
+  .main_content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .part_one,
+  .part_two {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .posts_list {
+    max-height: 400px;
+  }
+}
