@@ -67,7 +67,7 @@ body {
   backdrop-filter: blur(15px);
   box-sizing: border-box; /* To jest klucz do rozwiązania problemu */
   
-  border: 20px solid rgba(255, 255, 255, 0.28); /* Odzyskałem border, jeśli był zamierzony */
+  border: 16px solid rgba(255, 255, 255, 0.28); /* Odzyskałem border, jeśli był zamierzony */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Odzyskałem cień, jeśli był zamierzony */
   /* Dodaj obsługę przepełnienia, jeśli tekst ma być wewnątrz */
   overflow-y: auto; /* Dodałem, żeby długi tekst nie wychodził poza okno */
@@ -89,18 +89,20 @@ body {
     border-radius: 0;
     z-index: 1;
   margin: 0 auto; /* Wyśrodkowanie obrazka */
-  border-radius:5px;
+  border-radius:7px;
  }
 
 p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;          /* Komfortowy rozmiar do czytania */
-  font-weight: 500;         /* Nie za cienki, nie za gruby */
+  font-size: 15px;          /* Komfortowy rozmiar do czytania */
+  font-weight:500;         /* Nie za cienki, nie za gruby */
   color: #2E2E2E;           /* Ciemnoszary – łagodniejszy niż czarny */
   text-align:justify ; 
   padding:10px;      /* Wyrównanie do środka – pasuje do kart z obrazkiem */
   margin-top: 10px;         /* Lekki odstęp od obrazka */
   margin-bottom: 15px;
+  line-height: 1.5;   
+  text-indent: 1.5em;      /* Lepsza czytelność dzięki większej interlinii */
 }
 
 
