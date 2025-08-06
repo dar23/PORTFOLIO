@@ -40,7 +40,7 @@
   <input type="text" name="tweet" class="tweet" placeholder="Co słychać?" autofocus>
 
   <label for="media-upload" class="media-upload-button">
-    <span class="material-symbols-outlined">attach_file</span> <input type="file" id="media-upload" name="picture" accept="image/*,video/*" style="display: none;">
+    <span class="material-symbols-outlined">attach_file</span> <input type="file" id="media-upload" name="picture_video" accept="image/*,video/*" style="display: none;">
   </label>
 
   <button type="submit" name="submit_button" class="rocket_launch">
