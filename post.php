@@ -15,6 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+
+ if(str_starts_with($target_file,  ))
+
+
+
+
+
+
+
+
+
     $tweet = isset($_POST['tweet']) ? $_POST['tweet'] : '';
 
     $query = "INSERT INTO post_table (text_post,picture) VALUES ('$tweet','$picture')";

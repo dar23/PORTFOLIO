@@ -25,6 +25,8 @@ input.tweet {
   font-size: 16px;
   border: none;
   border-radius: 12px;
+  border:2px solid rgba(0, 0, 0, 0.1);
+
   outline: none;
   background: rgba(255, 255, 255, 0.8);
   color: #333;
@@ -37,7 +39,7 @@ input.tweet::placeholder {
 
 /* === Submit Button with Rocket === */
 .rocket_launch {
-  background-color: #007acc;
+  background-color: 	#cecdcd;
   border: none;
   padding: 12px;
   border-radius: 12px;
@@ -51,8 +53,9 @@ input.tweet::placeholder {
 }
 
 .rocket_launch:hover {
-  background-color: #005fa3;
+  background-color: #7b7b7b;
   transform: scale(1.05);
+
 }
 
 .material-symbols-outlined {
