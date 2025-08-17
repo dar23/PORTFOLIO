@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/portfolio/css/style.css">
 <link rel="stylesheet" href="/portfolio/css/menu.css">
 <link rel="stylesheet" href="/portfolio/css/post.css">
+<link rel="stylesheet" href="/portfolio/css/like_dislike.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +58,20 @@
 
 
 
-    <div class="part_two"></div>
+    <div class="part_two">
+
+
+      <?php include 'popular_post.php'; ?>
+
+
+
+
+
+
+
+
+
+    </div>
 
  </div>
 

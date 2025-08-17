@@ -9,7 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Obsługa uploadu zdjęcia
     if (isset($_FILES['picture_video']) && $_FILES['picture_video']['error'] === UPLOAD_ERR_OK) {
+      
         $fileType = mime_content_type($_FILES['picture_video']['tmp_name']);
+       
         if (strpos($fileType, 'image') === 0) {
             $target_file = $target_dir . basename($_FILES['picture_video']['name']);
             if (move_uploaded_file($_FILES['picture_video']['tmp_name'], $target_file)) {
@@ -56,7 +58,11 @@ if ($result) {
             echo '</video>';
         }
         echo "<p>" . htmlspecialchars($row['text_post']) . "</p>";
+
+  
         echo '</div>';
+
+        include('like.php');
     }
 } else {
     echo "Błąd zapytania: " . $mysqli->error;
