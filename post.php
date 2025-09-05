@@ -46,23 +46,30 @@ echo '<div class="posts_list">';
 if ($result) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="post_window">';
-        if (!empty($row['picture'])) {
+        if (!empty($row['picture']) and isset($row['picture'])) {
             echo '<div class="picture">';
             echo '<img src="uploads/' . htmlspecialchars($row['picture']) . '" class="picture_post">';
             echo '</div>';
+                 include 'like.php';
         }
-        if (!empty($row['video'])) {
+        if (!empty($row['video']) and isset($row['video'])) {
             echo '<video controls class="video_post">';
             echo '<source src="uploads/' . htmlspecialchars($row['video']) . '" type="video/mp4">';
             echo 'Twoja przeglądarka nie obsługuje wideo.';
             echo '</video>';
+                 include 'like.php';
         }
         echo "<p>" . htmlspecialchars($row['text_post']) . "</p>";
+
+
+ 
+       
 
   
         echo '</div>';
 
-        include('like.php');
+     
+      
     }
 } else {
     echo "Błąd zapytania: " . $mysqli->error;

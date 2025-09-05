@@ -1,9 +1,43 @@
 .like_dislike {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  width: 100%;
+  align-items:center;
+  justify-content:end;
+  margin-top: 14px;
+  width: 99.5%;
   height: 2vh;
-  gap: 10px;
+
+  gap:28px;
+
 }   
+
+
+
+
+.icon-button {
+ background: none;      /* usuwa tło */
+  border: none;          /* usuwa ramkę */
+  padding: 0;            /* usuwa domyślny padding */
+  margin: 0;             /* usuwa marginesy */
+  cursor: pointer;       /* zmienia kursor na rękę */
+  color: #767676;        /* kolor ikonki */
+  font-size: 1.5rem;     /* wielkość ikonki */
+  display: inline-flex;  /* dopasowanie do rozmiaru ikony */
+  align-items: center;   /* centrowanie ikony */
+  justify-content: center; /* centrowanie ikony */
+  line-height: 1;  
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.icon-button:hover {
+  color: #000000;        /* zmiana koloru ikonki przy najechaniu */
+
+animation: alternate 1s ease forwards;transform: scale(1.2);
+}
+
+
+.icon-button:focus {
+  /* zostaw focus dla dostępności */
+  outline-offset: 1px;
+  
+} 
