@@ -58,27 +58,58 @@ body {
 
 /* === Individual Post === */
 .post_window {
- width: 100%;
-  min-height: 700px; /* Jeśli chcesz stałą wysokość, pamiętaj o obsłudze przepełnienia tekstu */
- margin:0;
+  display: flex;
+  flex-direction: column; /* Aby elementy w poście układały się w kolumnie (zdjęcie, tekst itd.) */
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
   padding: 0;
   border-radius: 10px;
- background-color:#f2fafc;
+  background-color: #f2fafc;
   backdrop-filter: blur(15px);
-  box-sizing: border-box; /* To jest klucz do rozwiązania problemu */
-  
-  border: 16px solid rgba(255, 255, 255, 0.28); /* Odzyskałem border, jeśli był zamierzony */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Odzyskałem cień, jeśli był zamierzony */
-  /* Dodaj obsługę przepełnienia, jeśli tekst ma być wewnątrz */
-  overflow-y: auto; /* Dodałem, żeby długi tekst nie wychodził poza okno */
- 
+  box-sizing: border-box;
+  border: 16px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  overflow-y: auto;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-  margin-top:15px;
+  margin-top: 15px;
   text-align: justify;
- 
-  margin-bottom:30px;
-  
+  margin-bottom: 30px;
+  /* Dodane dla pozycjonowania ikony */
 }
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end; /* Wyrównuje do prawej strony */
+  align-items: center; /* Wyśrodkowuje w pionie */
+
+  top: 0;
+  right: 0;
+  width: 100%; /* Upewnij się, że ma szerokość, aby wyśrodkowanie działało poprawnie */
+  height:30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styl samej ikony */
+.fa-xmark {
+   width:5px; /* Przykładowa szerokość */
+  height: 40px;
+  font-size: 18px;
+  color: #656565; 
+    /* środek w pionie */
+
+  cursor: pointer;
+}
+
+.fa-xmark:hover {
+  color: #000;
+}
+
+
+
+
 
 
 

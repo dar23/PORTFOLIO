@@ -45,7 +45,7 @@ echo '<div class="posts_list">';
 
 if ($result) {
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="post_window">';
+        echo '<div class="post_window">'.'<div class="close-btn"><i class="fa-solid fa-xmark"></i></div>';
         if (!empty($row['picture']) and isset($row['picture'])) {
             echo '<div class="picture">';
             echo '<img src="uploads/' . htmlspecialchars($row['picture']) . '" class="picture_post">';
