@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/portfolio/css/style.css">
 <link rel="stylesheet" href="/portfolio/css/menu.css">
-<link rel="stylesheet" href="/portfolio/css/post.css">
+<link rel="stylesheet" href="/portfolio/css/input.css">
 <link rel="stylesheet" href="/portfolio/css/like_dislike.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
 
 
 <form action="post.php" method="post" class="post_form"  enctype="multipart/form-data">
-  <input type="text" name="tweet" class="tweet" placeholder="Co słychać?" autofocus>
+  <input type="text" name="tweet" class="tweet" placeholder="Co słychać?" autofocus><i class="fa-duotone fa-solid fa-t"></i>
 
   <label for="media-upload" class="media-upload-button">
     <span class="material-symbols-outlined">attach_file</span> <input type="file" id="media-upload" name="picture_video" accept="image/*,video/*" style="display: none;">
