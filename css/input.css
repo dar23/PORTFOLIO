@@ -84,12 +84,12 @@ input.tweet::placeholder {
                 border: none;
                 color: rgb(52, 59, 60);
                 cursor: pointer;
-                font-size: 20px;
+                font-size: 17px;
                 position: absolute;
                 z-index: 1;
             line-height: 35px;
                 right: 10px;
-             margin-top: 10px;
+             margin-top: 11px;
                 opacity: 0.3;
  }
 
