@@ -77,8 +77,8 @@ input.tweet::placeholder {
 
 
  .delete_button {
-  width: 35px;
-                height: 35px;
+  width: 30px;
+                height: 30px;
                 background-color: white;
                 border-radius: 100%;
                 border: none;
@@ -87,10 +87,10 @@ input.tweet::placeholder {
                 font-size: 17px;
                 position: absolute;
                 z-index: 1;
-            line-height: 35px;
+            line-height: 30px;
                 right: 10px;
              margin-top: 11px;
-                opacity: 0.3;
+                opacity: 0.5;
  }
 
 
