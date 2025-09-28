@@ -77,12 +77,26 @@ input.tweet::placeholder {
 
 
  .delete_button {
-                background-color: transparent;
+  width: 35px;
+                height: 35px;
+                background-color: white;
+                border-radius: 100%;
                 border: none;
-                color: rgb(238, 238, 238);
+                color: rgb(52, 59, 60);
                 cursor: pointer;
-                font-size: 24px;
-                position: absolute;z-index: 111;
-                top: 10px;
+                font-size: 20px;
+                position: absolute;
+                z-index: 1;
+            line-height: 35px;
                 right: 10px;
+             margin-top: 10px;
+                opacity: 0.3;
  }
+
+
+
+ .delete_button:hover {
+             color: rgb(52, 59, 60);
+                opacity: 1;
+  
+            }
