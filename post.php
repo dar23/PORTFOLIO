@@ -45,7 +45,17 @@ echo '<div class="posts_list">';
 
 if ($result) {
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="post_window">'.'<div class="close-btn"><i class="fa-solid fa-xmark"></i></div>';
+        echo '<div class="post_window">' ; 
+
+            echo '<form method="POST" action="delete_post.php" onsubmit="return confirm(\'Czy na pewno chcesz usunąć ten post?\');">';
+          
+            echo '<input type="hidden" name="post_id" value="' . $row['id'] . '">';
+            echo '<button type="submit" class="delete_button">'.'<i class="fa fa-trash delete_icon" aria-hidden="true">'.'</i>'.'</button>';   
+            echo '</form>';
+
+     
+
+
         if (!empty($row['picture']) and isset($row['picture'])) {
             echo '<div class="picture">';
             echo '<img src="uploads/' . htmlspecialchars($row['picture']) . '" class="picture_post">';
