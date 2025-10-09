@@ -47,11 +47,18 @@ if ($result) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="post_window">' ; 
 
-            echo '<form method="POST" action="delete_post.php" onsubmit="return confirm(\'Czy na pewno chcesz usunąć ten post?\');">';
-          
-            echo '<input type="hidden" name="post_id" value="' . $row['id'] . '">';
-            echo '<button type="submit" class="delete_button">'.'<i class="fa fa-trash delete_icon" aria-hidden="true">'.'</i>'.'</button>';   
-            echo '</form>';
+        // Formularz usuwania posta
+        echo '<form method="POST" action="delete_post.php" onsubmit="return confirm(\'Czy na pewno chcesz usunąć ten post?\');" style="display:inline;">';
+        echo '<input type="hidden" name="post_id" value="' . $row['id'] . '">';
+        echo '<button type="submit" class="delete_button"><i class="fa fa-trash delete_icon" aria-hidden="true"></i></button>';   
+        echo '</form>';
+
+
+
+
+
+
+
 
      
 
