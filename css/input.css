@@ -45,14 +45,23 @@ input.tweet::placeholder {
 }
 
 .rocket_launch:hover {
-  background-color: #7b7b7b;
+  background-color: #5e5e5e;
   transform: scale(1.05);
-
+ color:white;
 }
 
 .material-symbols-outlined {
   font-size: 50px;
 }
+.material-symbols-outlined:hover {
+
+  color:white;
+}
+
+.rocket_launch:hover .material-symbols-outlined {
+  color: rgba(255, 255, 255, 0.872);
+}
+
 
  .media-upload-button {
     cursor: pointer;
