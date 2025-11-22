@@ -55,14 +55,6 @@ if ($result) {
 
 
 
-
-
-
-
-
-     
-
-
         if (!empty($row['picture']) and isset($row['picture'])) {
             echo '<div class="picture">';
             echo '<img src="uploads/' . htmlspecialchars($row['picture']) . '" class="picture_post">';
