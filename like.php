@@ -23,3 +23,23 @@ echo '</div>';
 
 
 ?>
+
+
+
+
+<script>
+   
+   const thumbUp = document.querySelector('.fa-thumbs-up');
+   const thumbDown=document.querySelector('.fa-thumbs-down');
+
+
+   
+
+
+
+
+
+
+
+</script>
+
