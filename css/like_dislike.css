@@ -14,7 +14,7 @@
 
 
 
-.icon-button {
+.icon-button-like,.icon-button-dislike {
  background: none;      /* usuwa tło */
   border: none;          /* usuwa ramkę */
   padding: 0;            /* usuwa domyślny padding */

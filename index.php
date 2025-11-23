@@ -63,7 +63,7 @@
     <div class="part_two">
 
 
-      <?php include 'popular_post.php'; ?>
+      
 
 
 
@@ -77,9 +77,8 @@
 
  </div>
 
-  <script src="/portfolio/js/icon_rocket.js"></script>
 
-    <script src="/portfolio/js/script.js"></script>
+
 
     <script src="/portfolio/js/main.js"></script>
 

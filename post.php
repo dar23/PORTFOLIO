@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $tweet = isset($_POST['tweet']) ? $_POST['tweet'] : '';
 
-    $query = "INSERT INTO post_table (text_post, picture, video) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
+    $query = "INSERT INTO post_table (id,text_post, picture, video) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
     $result = $mysqli->query($query);
 
     if ($result) {
@@ -66,6 +66,8 @@ if ($result) {
             echo '<source src="uploads/' . htmlspecialchars($row['video']) . '" type="video/mp4">';
             echo 'Twoja przeglądarka nie obsługuje wideo.';
             echo '</video>';
+
+            
                  include 'like.php';
         }
         echo "<p>" . htmlspecialchars($row['text_post']) . "</p>";
