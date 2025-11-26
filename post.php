@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $tweet = isset($_POST['tweet']) ? $_POST['tweet'] : '';
 
-    $query = "INSERT INTO post_table (id,text_post, picture, video) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
+  $query = "INSERT INTO post_table (id,text_post, picture, video,add_like,dislike) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
     $result = $mysqli->query($query);
 
     if ($result) {
@@ -68,7 +68,57 @@ if ($result) {
             echo '</video>';
 
             
-                 include 'like.php';
+
+
+echo '<div class="like_dislike">';
+
+echo '
+<form method="post" name="add_one">
+    <div class="like-wrapper_0">
+        <button type="button" class="icon-button-like"><i class="fa-solid fa-thumbs-up"></i></button>
+        <div class="counter_0">0</div>
+    </div>
+</form>
+';
+
+echo '
+<form method="post" name="minus_one">
+ <div class="like-wrapper_1">
+    <button type="button" class="icon-button-dislike"><i class="fa-solid fa-thumbs-down"></i></button>
+     <div class="counter_1">0</div>
+    </div>
+</form>
+';
+
+echo '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         }
         echo "<p>" . htmlspecialchars($row['text_post']) . "</p>";
 

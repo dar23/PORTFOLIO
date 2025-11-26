@@ -77,7 +77,7 @@
 
  </div>
 
-
+    <script src="/portfolio/js/likes.js"></script>
 
 
     <script src="/portfolio/js/main.js"></script>
