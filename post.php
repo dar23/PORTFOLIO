@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $tweet = isset($_POST['tweet']) ? $_POST['tweet'] : '';
 
-  $query = "INSERT INTO post_table (id,text_post, picture, video,add_like,dislike) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
+  $query = "INSERT INTO post_table (text_post, picture, video) VALUES ('$tweet', '$picture', '$video')"; // typ określony przy obsłudze uploadu
     $result = $mysqli->query($query);
 
     if ($result) {
@@ -45,7 +45,7 @@ echo '<div class="posts_list">';
 
 if ($result) {
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="post_window">' ; 
+        echo '<div class="post_window"   data-post-id="'. htmlspecialchars($row['id']) . '" >' ; 
 
         // Formularz usuwania posta
         echo '<form method="POST" action="delete_post.php" onsubmit="return confirm(\'Czy na pewno chcesz usunąć ten post?\');" style="display:inline;">';
