@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/portfolio/css/menu.css">
 <link rel="stylesheet" href="/portfolio/css/input.css">
 <link rel="stylesheet" href="/portfolio/css/like_dislike.css">
+<link rel="stylesheet" href="/portfolio/css/delete.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
 </head>
 <body>
 
-
+ 
 
 
  <div class="main_content">

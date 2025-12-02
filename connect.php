@@ -9,6 +9,13 @@ $db   = 'post_info';
 // Utworzenie nowego połączenia
 $mysqli = new mysqli($host,$user,$pass,$db);
 
+
+
+
+
+
+
+
 // Sprawdzenie, czy połączenie się udało
 if ($mysqli->connect_errno) {
     echo "Błąd połączenia z MySQL: " . $mysqli->connect_error;

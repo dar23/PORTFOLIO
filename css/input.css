@@ -84,38 +84,3 @@ input.tweet::placeholder {
     background-color: inherit;
 }
 
-
- .delete_button {
-  width: 24px;
-                height: 24px;
-                background-color: white;
-                border-radius: 100%;
-                border: none;
-                color: rgb(52, 59, 60);
-                cursor: pointer;
-             
-                position: absolute;
-                z-index: 1;
-            
-                right: 10px;
-             margin-top: 11px;
-                opacity: 0;
-  display: flex;               /* dodane */
-  align-items: center;         /* pionowe wyśrodkowanie */
-  justify-content: center; 
-
-
-
- }
-.delete_icon{
-
-  font-size: 12px;
-
-}
-
-
- .delete_button:hover {
-             color: rgb(52, 59, 60);
-                opacity: 1;
-  
-            }
