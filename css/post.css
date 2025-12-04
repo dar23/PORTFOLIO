@@ -4,40 +4,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  /* Przywracamy stałą wysokość całego ekranu */
+  height: 100vh; 
   margin: 0;
-  /* Dodano, aby body nie miało paska przewijania, to main_content go obsłuży w pionie */
-  overflow-y: auto; 
+  /* Całe body nie może się przewijać */
+  overflow-y: hidden; 
 }
-
 
 /* === Layout === */
 .main_content {
   display: flex;
-  /* Domyślnie centruje zawartość w poziomie, gdy jest dostępna dodatkowa przestrzeń */
   justify-content: center; 
   gap: 20px;
   width: 100%;
-  /* Pozwala stronie przewijać się w pionie */
-  height: auto; 
-  min-height: 100vh; /* Zapewnia, że tło obejmuje cały ekran */
+  /* Wysokość powinna wypełniać dostępną przestrzeń bez przewijania */
+  height: 100vh; 
+  min-height: 100vh; 
   background: inherit;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 10px 0; /* Dodaje lekki odstęp na górze i dole */
+  padding: 10px 0; 
+  /* Cały main_content też nie powinien się przewijać globalnie */
+  overflow-y: hidden;
 }
 
 /* === Left Column: Posts Section (Główna oś czasu) === */
 .part_one {
-  /* Kluczowa zmiana: Stała szerokość na dużych ekranach, ale elastyczna */
   width: 100%;
-  max-width: 600px; /* Maksymalna szerokość jak w Twitterze */
+  max-width: 500px;
   padding: 10px 10px;
-  padding-bottom: 30px;
-  margin: 0; /* Marginesy kontrolowane przez gap w main_content */
+  /* padding-bottom: 30px; */ /* Opcjonalnie usuń, jeśli sprawia problemy z height calc */
+  margin: 0; 
   border-radius: 10px;
-  overflow: hidden;
+  /* Usuwamy overflow: hidden, aby pozwolić posts_list na przewijanie wewnątrz */
+  /* overflow: hidden; */ 
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -45,17 +46,70 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* Usunięto stałe height: calc(100vh - 20px); aby umożliwić przewijanie się strony */
+  /* Dodaj stałą wysokość do part_one */
+  height: calc(100vh - 20px); /* 100vh minus 2x padding 10px z main_content */
 }
+
+/* === Scrollable Post List === */
+.posts_list {
+  width: 95%;
+  margin-bottom: 10px;
+  /* Kluczowa zmiana: to jest kontener, który ma się przewijać */
+  overflow-y: auto;
+  /* Musi mieć zdefiniowaną wysokość, aby overflow działał poprawnie. */
+  /* Wypełnia resztę miejsca dostępnego w rodzicu (.part_one) */
+  flex-grow: 1; 
+}
+
+/* Przywracamy ukrywanie scrollbara tylko dla tego elementu */
+.posts_list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+  visibility: hidden; /* IE 10+ */
+}
+.post_window {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  width: 100%;  
+  min-height: 400px; /* Możesz dostosować tę wartość, aby posty nie były gigantyczne bez treści */
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: #f2fafc;
+  backdrop-filter: blur(15px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin-top: 15px;
+  text-align: justify;
+  margin-bottom:2%;
+}
+
+
+video{
+
+  border-radius:10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* === Right Column: Additional Section (Boczny pasek) === */
 .part_two {
-  /* Kluczowa zmiana: Stała szerokość, która znika na małych ekranach */
   width: 300px; 
   padding: 20px 10px;
-  margin: 0; /* Marginesy kontrolowane przez gap w main_content */
+  margin: 0;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Może pozostać hidden, bo tu treść jest stała */
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -64,38 +118,7 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
-  /* Dodano flex-shrink: 0, aby nie zmniejszał się, dopóki media query go nie usunie */
   flex-shrink: 0;
+  /* Dodajemy wysokość, aby pasowała do lewej kolumny */
+  height: calc(100vh - 20px);
 }
-
-/* === Scrollable Post List === */
-.posts_list {
-  width: 95%;
-  /* Usunięto overflow-y: auto; tutaj. Pozwolimy, aby cała strona się przewijała, co jest bardziej naturalne dla układu typu Twitter/YT. */
-  margin-bottom: 10px;
-}
-
-/* Usunięto ukrywanie scrollbara dla posts_list, ponieważ teraz body zarządza przewijaniem */
-
-/* === Individual Post === */
-.post_window {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%; /* Zajmuje pełną szerokość .posts_list */
-  min-height: 700px;
-  margin: 0;
-  padding: 0;
-  border-radius: 10px;
-  background-color: #f2fafc;
-  box-sizing: border-box;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  /* Usunięto overflow-y: auto; scrollbar-color: */
-  margin-top: 15px;
-  text-align: justify;
-  margin-bottom: 30px;
-}
-
-/* Pozostałe style dla przycisków, wideo, obrazów i tekstu pozostają bez zmian */
-
-/* === Responsive Layout === */

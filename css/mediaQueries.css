@@ -1,5 +1,20 @@
 @media screen and (max-width: 960px) {
-    /* Ukryj prawą kolumnę (part_two) na ekranach mniejszych niż 960px, aby zwolnić miejsce */
+    
+   nav{
+
+display: none;
+
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Ukryj prawą kolumnę (part_two) na ekranach mniejszych niż 960px, aby zwolnić miejsce */
     .part_two {
         display: none;
     }
@@ -18,8 +33,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Możesz zachować istniejące media query dla bardzo małych ekranów, ale powyższe 960px jest bardziej uniwersalne */
-  /* Twoje oryginalne media query (może zostać usunięte lub dostosowane): */
+   
+   nav{
+
+display: none;
+
+   }
+  
+  
   .main_content {
     flex-direction: column;
     align-items: center;
