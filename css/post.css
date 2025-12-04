@@ -32,7 +32,7 @@ body {
 /* === Left Column: Posts Section (Główna oś czasu) === */
 .part_one {
   width: 100%;
-  max-width: 500px;
+  max-width:450px;
   padding: 10px 10px;
   /* padding-bottom: 30px; */ /* Opcjonalnie usuń, jeśli sprawia problemy z height calc */
   margin: 0; 
@@ -71,7 +71,7 @@ body {
   flex-direction: column; 
   position: relative;
   width: 100%;  
-  min-height: 400px; /* Możesz dostosować tę wartość, aby posty nie były gigantyczne bez treści */
+  max-height: auto; /* Możesz dostosować tę wartość, aby posty nie były gigantyczne bez treści */
   margin: 0;
   padding: 0;
   border-radius: 10px;
@@ -81,14 +81,14 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   margin-top: 15px;
   text-align: justify;
-  margin-bottom:2%;
+  margin-bottom:5%;
 }
 
 
 video{
 
   border-radius:10px;
-
+ 
 
 
 }
