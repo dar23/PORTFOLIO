@@ -13,7 +13,7 @@
 
         <li><a href="https://github.com/"><span class="material-symbols-outlined">play_circle</span>filmy</a></li>
                 <li><a href="about.php"><span class="material-symbols-outlined" style="font-size:25px">image</span>memy</a></li>
-                 <li><a href="index.php"><span class="material-symbols-outlined">home</span>Home</a></li>
+               
        
         <li><a href="portfolio.php"><span class="material-symbols-outlined">chat</span>chat</a></li>
         <li><a href="contact.php"><span class="material-symbols-outlined">mail</span>profil</a></li>      

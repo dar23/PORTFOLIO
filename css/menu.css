@@ -48,7 +48,7 @@ li a {
   font-optical-sizing: auto;
   font-weight:700;
   font-style: normal;
-   text-transform: uppercase;
+   text-transform:capitalize;
   font-variation-settings: "wdth" 200;
   text-align: center;
 
@@ -74,8 +74,14 @@ span.material-symbols-outlined {
   'opsz' 24;
 color:rgb(117, 116, 116); 
  font-size:25px; 
- margin:-1px 6px 1px;
+ margin:2px 10px 1px;
 }
+
+
+
+
+
+
 
 li:hover {
  font-family: "Oswald", sans-serif;
