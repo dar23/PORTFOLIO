@@ -1,0 +1,33 @@
+@media screen and (max-width: 960px) {
+    /* Ukryj prawą kolumnę (part_two) na ekranach mniejszych niż 960px, aby zwolnić miejsce */
+    .part_two {
+        display: none;
+    }
+    
+    .main_content {
+        /* Usuwamy odstęp gap, gdy mamy tylko jedną kolumnę */
+        gap: 0; 
+    }
+
+    .part_one {
+        /* Na małych ekranach główna kolumna może zająć całą szerokość */
+        max-width: 100%; 
+        width: 100%;
+        margin: 0 10px; /* Dodajemy marginesy boczne, żeby treść nie dotykała krawędzi ekranu */
+    }
+}
+
+@media screen and (max-width: 768px) {
+  /* Możesz zachować istniejące media query dla bardzo małych ekranów, ale powyższe 960px jest bardziej uniwersalne */
+  /* Twoje oryginalne media query (może zostać usunięte lub dostosowane): */
+  .main_content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .part_one {
+    width: 90%;
+    margin: 10px 0;
+  }
+}

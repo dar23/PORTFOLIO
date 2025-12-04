@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/portfolio/css/style.css">
+    <link rel="stylesheet" href="/portfolio/css/post.css"> 
+  
 <link rel="stylesheet" href="/portfolio/css/menu.css">
+<link rel="stylesheet" href="/portfolio/css/mediaQueries.css">
 <link rel="stylesheet" href="/portfolio/css/input.css">
 <link rel="stylesheet" href="/portfolio/css/like_dislike.css">
 <link rel="stylesheet" href="/portfolio/css/delete.css">
