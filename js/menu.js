@@ -7,9 +7,10 @@ menu_items.forEach(function(item) {
 
     item.addEventListener('mouseover', function() {
         
-      link.style.transform = "scale(1.4)";
-      link.style.color="rgb(2, 150, 195)";
-         icon.style.color="rgb(2, 150, 195)";
+      link.style.transform = "scale(1.3)";
+      link.style.color="rgba(6, 100, 183, 1)";
+         icon.style.color="rgba(6, 100, 183, 1)";
+         
         
     });
 
