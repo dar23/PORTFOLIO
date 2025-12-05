@@ -1,0 +1,124 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Przywracamy stałą wysokość całego ekranu */
+  height: 100vh; 
+  margin: 0;
+  /* Całe body nie może się przewijać */
+  overflow-y: hidden; 
+}
+
+/* === Layout === */
+.main_content {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+  width: 100%;
+  /* Wysokość powinna wypełniać dostępną przestrzeń bez przewijania */
+  height: 100vh; 
+  min-height: 100vh; 
+  background: inherit;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10px 0; 
+  /* Cały main_content też nie powinien się przewijać globalnie */
+  overflow-y: hidden;
+}
+
+/* === Left Column: Posts Section (Główna oś czasu) === */
+.part_one {
+  width: 100%;
+  max-width:450px;
+  padding: 10px 10px;
+  /* padding-bottom: 30px; */ /* Opcjonalnie usuń, jeśli sprawia problemy z height calc */
+  margin: 0; 
+  border-radius: 10px;
+  /* Usuwamy overflow: hidden, aby pozwolić posts_list na przewijanie wewnątrz */
+  /* overflow: hidden; */ 
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Dodaj stałą wysokość do part_one */
+  height: calc(100vh - 20px); /* 100vh minus 2x padding 10px z main_content */
+}
+
+/* === Scrollable Post List === */
+.posts_list {
+  width: 95%;
+  margin-bottom: 10px;
+  /* Kluczowa zmiana: to jest kontener, który ma się przewijać */
+  overflow-y: auto;
+  /* Musi mieć zdefiniowaną wysokość, aby overflow działał poprawnie. */
+  /* Wypełnia resztę miejsca dostępnego w rodzicu (.part_one) */
+  flex-grow: 1; 
+}
+
+/* Przywracamy ukrywanie scrollbara tylko dla tego elementu */
+.posts_list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+  visibility: hidden; /* IE 10+ */
+}
+.post_window {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  width: 100%;  
+  max-height: auto; /* Możesz dostosować tę wartość, aby posty nie były gigantyczne bez treści */
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: #f2fafc;
+  backdrop-filter: blur(15px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin-top: 15px;
+  text-align: justify;
+  margin-bottom:5%;
+}
+
+
+video{
+
+  border-radius:10px;
+ 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === Right Column: Additional Section (Boczny pasek) === */
+.part_two {
+  width: 300px; 
+  padding: 20px 10px;
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden; /* Może pozostać hidden, bo tu treść jest stała */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-shrink: 0;
+  /* Dodajemy wysokość, aby pasowała do lewej kolumny */
+  height: calc(100vh - 20px);
+}

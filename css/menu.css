@@ -1,0 +1,104 @@
+
+nav{
+  width:100px;
+  height: auto;
+  margin: 10px;
+  margin-top:100px;
+  margin-right:60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+
+
+ul{
+
+  list-style: none;
+  margin:0;
+  padding: 0;
+  
+}
+
+
+
+li{
+  display: flex;      
+  align-items: center;  
+  justify-content: flex-start;
+  width: 200px;
+  padding: 8px 10px;        /* mniejszy odstęp wewnętrzny */
+  min-height: 35px;         /* mniejsza wysokość pozycji */
+  border: 1px solid transparent;
+  line-height: 1;
+
+}
+li a {
+
+  display: flex;
+  align-items:safe center;
+  justify-content: center; /* jeśli chcesz wyśrodkować w poziomie */
+   /* odstęp między ikoną a tekstem */
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+   font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:700;
+  font-style: normal;
+   text-transform:capitalize;
+  font-variation-settings: "wdth" 200;
+  text-align: center;
+  font-size: 14px; 
+  letter-spacing: 0.3px;
+  
+}
+
+a{
+
+ margin-right:10px auto;
+  
+}
+
+a:hover {
+
+ font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:700;
+  font-style: normal;
+ 
+  font-variation-settings: "wdth" 200;
+  text-align: center;
+
+  
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ 
+
+span.material-symbols-outlined {
+  
+
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24;
+color:rgb(117, 116, 116); 
+   
+ margin:2px 10px 1px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+.like_dislike {
+  display: flex;
+  align-items:center;
+  justify-content:flex-end;
+  margin-top: 25px;
+  
+
+  width: 100%;
+  height: auto;
+
+  
+
+}   
+
+
+
+
+.icon-button-like,.icon-button-dislike {
+ background: none;      /* usuwa tło */
+  border: none;          /* usuwa ramkę */
+  padding: 0;            /* usuwa domyślny padding */
+  margin: 0;             /* usuwa marginesy */
+  cursor: pointer;       /* zmienia kursor na rękę */
+  color: #262322;        /* kolor ikonki */
+  font-size: 1rem;     /* wielkość ikonki */
+  display: inline-flex;  /* dopasowanie do rozmiaru ikony */
+  align-items: center;   /* centrowanie ikony */
+  justify-content: center; /* centrowanie ikony */
+
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.icon-button:hover {
+  color: #000000;        /* zmiana koloru ikonki przy najechaniu */
+
+animation: alternate 1s ease forwards;transform: scale(1.2);
+}
+
+
+.icon-button:focus {
+  /* zostaw focus dla dostępności */
+  outline-offset: 1px;
+  
+} 
+
+
+.fa-xmark{
+
+  position:inherit;
+margin-right:5px;
+
+
+
+  
+  height: 2vh;
+ font-size: 12px;
+}
+
+.like-wrapper_0 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right:30px;
+    
+}
+.like-wrapper_1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  margin-right:20px;
+    
+}
+.counter_0 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    margin-top:2px;
+}
+
+.counter_1{
+
+  font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    margin-top:2px;
+
+
+
+}
