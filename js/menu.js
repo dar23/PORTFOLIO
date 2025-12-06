@@ -10,7 +10,7 @@ menu_items.forEach(function(item) {
       
       link.style.color="rgba(6, 100, 183, 1)";
          icon.style.color="rgba(6, 100, 183, 1)";
-           link.style.fontSize="14px";
+           link.style.fontSize="20px";
         
     });
 
@@ -19,6 +19,6 @@ menu_items.forEach(function(item) {
       
      link.style.color=" rgb(44, 44, 44)"; 
        icon.style.color="rgb(44, 44, 44)";
-        link.style.fontSize="14px";
+        link.style.fontSize="20px";
     });
 }); 
